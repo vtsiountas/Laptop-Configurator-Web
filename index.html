@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Configurator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="productImage">
+          <img id="redImg" src="./images/red.png" alt="">
+          <img id="greenImg" src="./images/green.png" alt="">
+          <img id="blueImg" src="./images/blue.png" alt="">
+          <img id="blackImg" src="./images/black.png" alt="">
+          <img id="whiteImg" src="./images/white.png" alt="">
+        </div>
+
+        <div class="details">
+
+          <div class="productDescription">
+              <span>LAPTOP</span>
+              <h1>Asus Zenbook 3</h1>
+              <p>The elegant ZenBook is compact, ultrathin and light, featuring the best laptop technology, NanoEdge displays, precision craftsmanship, uncompromising performance, and innovation. It's designed to bring out the very best in you.</p>
+          </div>
+
+
+          <form class="configuration">
+            
+            <!-- Color Configuration -->
+            <div class="color">
+              <span>Color</span>
+
+              <div class="chooseColor" onchange="imageChange()">
+                <div>
+                  <input type="radio" id="white" name="color" value="white" checked>
+                  <label for="white"><span></span></label>
+                </div>
+                <div>
+                  <input type="radio" id="black" name="color" value="black">
+                  <label for="black"><span></span></label>
+                </div>
+                <div>
+                  <input type="radio" id="blue" name="color" value="blue">
+                  <label for="blue"><span></span></label>
+                </div>
+                <div>
+                  <input type="radio" id="green" name="color" value="green">
+                  <label for="green"><span></span></label>
+                </div>
+                <div>
+                  <input type="radio" id="red" name="color" value="red">
+                  <label for="red"><span></span></label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Ram Configuration -->
+            <div class="ram">
+              <span>RAM Configuration</span>
+
+              <div class="chooseRam" onchange="ramChange()">
+                <div>
+                  <input type="radio" id="8GB" name="ram" value="8GB" checked>
+                  <label for="8GB">8GB</label>
+                  <h5>Default</h5>
+                </div>
+                <div>
+                  <input type="radio" id="16GB" name="ram" value="16GB">
+                  <label for="16GB">16GB</label>
+                  <h5>+150$</h5>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Storage Configuration -->
+            <div class="storage">
+              <span>Storage Configuration</span>
+
+              <div class="chooseStorage" onchange="storageChange()">
+                <div>
+                  <input type="radio" id="256GB" name="storage" value="256GB" checked>
+                  <label for="256GB">256GB SSD</label>
+                  <h5>Default</h5>
+                </div>
+                <div>
+                  <input type="radio" id="512GB" name="storage" value="512GB">
+                  <label for="512GB">512GB SSD</label>
+                  <h5>+100$</h5>
+                </div>
+                <div>
+                  <input type="radio" id="1TB" name="storage" value="1TB">
+                  <label for="1TB">1TB SSD</label>
+                  <h5>+250$</h5>
+                </div>
+                </div>
+              
+            </div>
+
+            <div class="price">
+              <h2>Total Price: 800$</h2>
+            </div>
+
+            <div class="Purchase">
+              <input type="submit" id="submit" value="Submit">
+              <label for="submit">Purchase</label>
+            </div>
+          </form>
+
+        
+
+
+        </div>
+    </div>
+</body>
+</html>

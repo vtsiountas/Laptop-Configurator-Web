@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+body {
+  background-image: url(./images/whiteBg.jpg);
+  transition: 0.3s;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+}
+.productImage {
+  width: 65%;
+  position: relative;
+}
+
+.details {
+  width: 35%;
+  margin-top: 60px;
+}
+
+.productImage img {
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.productDescription {
+  border-bottom: 1px solid lightgrey;
+  margin-bottom: 20px;
+}
+
+.productDescription span {
+  font-size: 12px;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 3px;
+}
+.productDescription h1 {
+  font-weight: bold;
+  font-size: 50px;
+  color: #2f3a45;
+  letter-spacing: -2px;
+}
+.productDescription p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.configuration span {
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.color, .storage  {
+  margin-bottom: 30px;
+}
+.ram {
+  margin-bottom: 10px;
+}
+
+.chooseColor div, .chooseStorage div, .chooseRam div {
+  display: inline-block;
+}
+  
+.chooseColor input[type="radio"] {
+  display: none;
+}
+  
+.chooseColor input[type="radio"] + label span {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+}
+  
+.chooseColor input[type="radio"] + label span {
+  border: 2px solid whitesmoke;
+  box-shadow: 0 1px 3px 0 grey;
+}
+
+.chooseColor input[type="radio"]#black + label span {
+  background-color: black;
+}
+.chooseColor input[type="radio"]#blue + label span {
+  background-color: darkblue;
+}
+.chooseColor input[type="radio"]#green + label span {
+  background-color: darkgreen;
+}
+.chooseColor input[type="radio"]#red + label span {
+  background-color: darkred;
+}
+.chooseColor input[type="radio"]#white + label span {
+  background-color:lightgray;
+}
+
+.chooseColor input[type="radio"]:checked + label span {
+  background-image: url(./images/check-mark.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.chooseStorage input[type="radio"],
+.chooseRam input[type="radio"] {
+  display: none;
+}
+
+.chooseStorage input[type="radio"] + label,
+.chooseRam input[type="radio"] + label {
+  cursor: pointer;
+
+}
+
+.chooseStorage label,
+.chooseRam label {
+  display: block;
+  width: 100px;
+  height: 25px;
+  background: white;
+  border: 2px solid lightgrey;
+  color: grey;
+  border-radius: 20px;
+  padding: 10px;
+  margin: -1px 4px 10px 0;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px #a1aaa680;
+  position: relative;
+}
+
+.chooseStorage input[type="radio"]:checked + label,
+.chooseRam input[type="radio"]:checked + label {
+  color: black;
+  font-weight: 1000;
+  border: 3px solid black;
+  box-shadow: 0px 0px 5px black;
+}
+
+
+.chooseStorage input[type="radio"]:not(:checked):hover + label,
+.chooseRam input[type="radio"]:not(:checked):hover + label {
+  color: darkgray;
+  box-shadow: 0px 0px 5px black;
+}
+
+.configuration h5 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.price {
+  margin-top: 0;
+}
+
+.price span {
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.Purchase input[type="submit"] {
+  display: none;
+} 
+
+.Purchase input[type="submit"] + label {
+  display: block;
+  height: 25px;
+  background: green;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  margin: -1px 4px 10px 0;
+  text-align: center;
+  box-shadow: 0px 3px 10px -2px #a1aaa680;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.Purchase input[type="submit"]:hover + label {
+  box-shadow: 0px 0px 10px #2dc718;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .container {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
+  .productImage,
+  .details {
+    width: 100%;
+  }
+
+  .productImage img {
+    width: 300px;
+    right: 0;
+    top: -65px;
+    left: initial;
+  }
+
+  .configuration, 
+  .configuration span{
+    display: inline-block;
+    position: relative;
+    left: 50%; 
+    transform: translateX(-50%);
+  }
+
+  .chooseColor, .chooseRam, .chooseStorage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .price span {
+    text-align: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .productImage img {
+    width: 220px;
+    top: -85px;
+  }
+}
